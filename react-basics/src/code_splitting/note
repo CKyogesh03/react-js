@@ -1,0 +1,45 @@
+LEARNED FROM WEB DEV SIMPLIFY:
+================
+DEFAULT BUNDLING BEHAVIOUR:
+
+
+
+==============
+code splitting or lazy loading
+-it prevents the loading of entire code in the browser.
+-needed code loaded only if the operation occurs 
+
+default behaviour of bundling the component:
+
+
+
+code splitting using dynamic import():
+- help us to load the code only if the opertion is occurred.
+
+code splitting using lazy() method:
+1. import {lazy} from 'react'  //import lazy method from react
+2. React.lazy(()=>import('path'))  //directly accessing from React
+
+note: lazy method returns the promise object.
+
+<Suspense> component enclose/wraps the other component in lazy():
+syntax: <Suspense><VideoStreaming></Suspese>
+
+<Suspense> component enclose/wraps the <Outlet> component in lazy():
+- it is used to make the child routes to load lazily.
+- if child route is invoked then use the module provided in the lazy() method and load the codes use need.
+-syntax: <Suspense> <Outlet></Suspense>
+<Suspense fallback={<h1>Loading...</h1>}>
+-fallback is executed when loading large codes lazily during the lazy loading process.
+
+===
+wait(seconds) - used to wait the page during lazy loading
+React.lazy(()=>wait(3000).then(()=>import('path')))
+
+IMPORTING NORMAL EXPORT VS DEFAULT EXPORT VS NAMED EXPORT:
+
+using useTransition() hook with code splitting concept:
+
+BEST PRACTICES:
+-create on common component which accept module path and user data
+eg: Component('module path',admin data)

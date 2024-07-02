@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // code with error
-const State = () => {
+const UseState = () => {
     const [id,setId] = useState(0)
     const [name,setName]=useState("");
     const [eligible,setEligible]=useState(false);
@@ -26,4 +26,4 @@ const State = () => {
   )
 }
 
-export default State
+export default UseState

@@ -11,9 +11,9 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navbar />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
+        <Route path="/instagram/" element={<Navbar />}>  {/* here it is a parent so it remains constant for all pages */}
+          <Route index element={<Home />} /> {/* invoked bydefault, it uses its parent path */}
+          <Route path="blogs" element={<Blogs />} /> {/* in child path, parent path slash added/prefixed with all child bcoz of <outlet> tag */}
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>

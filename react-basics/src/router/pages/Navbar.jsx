@@ -4,15 +4,15 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <ul>
+        <ul style={{ listStyleType: "none", display: "flex", flexDirection: "row" , justifyContent:"space-around"}}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/instagram/">Home</Link>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <Link to="/instagram/blogs">Blogs</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/instagram/contact">Contact</Link>
           </li>
         </ul>
       </nav>

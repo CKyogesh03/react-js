@@ -1,0 +1,10 @@
+react memo -> with memo -> Counter
+      check why 2 times rendering for each-render.
+
+useCallback is pending
+
+passing data as props:
+doubt:
+how to access function that is passed in the component.
+
+AsSingleObjectInJsxAttribute --> problem when accessing passed object -> boolean value is not accessing
